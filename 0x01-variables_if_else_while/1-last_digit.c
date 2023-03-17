@@ -12,12 +12,10 @@
 int main(void)
 {
 int n;
-int i, last, counter;
+int i, last;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-
-n = -900000010;
 
 last = (n % 10);
 
