@@ -16,17 +16,21 @@ int i;
 for (i = 48; i < 58; i++)
 {
 
+
+putchar(i);
 if (i != 57)
 {
-putchar(i);
 putchar(',');
+}
+else
+{
+continue;
+}
 putchar(' ');
+
 }
-else {
-putchar(i);
-}
-}
+
+putchar('\n');
 
 return (0);
 }
-
