@@ -16,12 +16,11 @@ void more_numbers(void)
 		if (i > 9)
 		{
 			_putchar(u + '0');
-			_putchar(x + '0');
 		}
-		else
-		{
-			_putchar(i + '0');
-		}
+
+		_putchar(x + '0');
+
 	}
+	_putchar('\n');
 }
 
