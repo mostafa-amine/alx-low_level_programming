@@ -1,3 +1,6 @@
+#include "main.h"
+
+
 /**
  * print_line - function that prints 10 times the numbers, from 0 to 14
  * @n: n
