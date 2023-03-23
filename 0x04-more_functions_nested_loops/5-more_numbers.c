@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_most_numbers -  function that prints the numbers, from 0 to 9
+ * more_numbers - function that prints 10 times the numbers, from 0 to 14
  * @void: void
 */
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int i = 0, u, x;
 
