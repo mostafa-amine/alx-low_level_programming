@@ -8,7 +8,7 @@
 int main(void)
 {
 
-	int i = 0;
+	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -26,7 +26,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d", i);
+			printf("%i", i);
 		}
 		if (i != 100)
 		{
