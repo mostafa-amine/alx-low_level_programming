@@ -1,11 +1,44 @@
 #include "main.h"
 
 /**
+ * checks - check numbers
+ * @r: int
+*/
+void checks(int r)
+{
+	if (r < 10)
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(r + '0');
+	}
+	else if (r < 100)
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar((r / 10) + '0');
+		_putchar((r % 10) + '0');
+	}
+	else
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar((r / 100) + '0');
+		_putchar(((r / 10) % 10) + '0');
+		_putchar((r % 10) + '0');
+	}
+}
+
+/**
  * print_times_table - prints the n times table, starting with 0
  * @n: the table to print
  *
  * Return: void
  */
+
 void print_times_table(int n)
 {
 	int i, j, r;
@@ -18,38 +51,13 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			r = i * j;
-
 			if (j == 0)
 				_putchar('0');
 			else
 			{
-				if (r < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(r + '0');
-				}
-				else if (r < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((r / 10) + '0');
-					_putchar((r % 10) + '0');
-				}
-				else
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar((r / 100) + '0');
-					_putchar(((r / 10) % 10) + '0');
-					_putchar((r % 10) + '0');
-				}
+				checks(r);
 			}
 		}
-
 		_putchar('\n');
 	}
 }
