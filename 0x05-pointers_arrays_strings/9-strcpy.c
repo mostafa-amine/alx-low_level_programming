@@ -8,7 +8,7 @@ char *_strcpy(char *dest, char *src)
 {
 	int i = 0, j;
 
-	if (src == NULL || src[0] == '\0')
+	if (src[0] == '\0')
 	{
 		dest[0] = '\0';
 		return (dest);
