@@ -12,14 +12,17 @@ void puts_half(char *str)
 	{
 		length++;
 	}
-
 	if (length % 2 == 0)
 	{
 		half = length / 2;
 	}
-	else
+	else if (length  % 2 == 0 && length < 400)
 	{
 		half = (length - 1) / 2;
+	}
+	else
+	{
+		half = (length + 1) / 2;
 	}
 
 	for (j = half; j < length; j++)
