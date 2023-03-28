@@ -19,6 +19,10 @@ int _atoi(char *s)
 		else if (*s >= '0' && *s <= '9')
 		{
 			num = num * 10 + (*s - 48);
+			if (*(s + 1) == ' ')
+			{
+				break;
+			}
 		}
 
 		s++;
