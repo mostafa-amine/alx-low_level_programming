@@ -4,28 +4,27 @@
  * _strcmp - compare a string
  * @s1: char
  * @s2: char
- * Return: diff
+ * Return: difference
 */
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0, j = 0, diff;
 
-	while (s1[i] != '\0')
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
-		while (s2[j] != '\0')
+		if (s1[i] != s2[i])
 		{
-			if (s1[i] != s2[j])
-			{
-				diff = ((int) s1[i]) - ((int) s2[j]);
-				return (diff);
-			}
-			else
-			{
-				return (0);
-			}
-			j++;
+			return (s1[i] - s2[i]);
 		}
-		i++;
+	}
+
+	if (s1[i] == s2[i])
+	{
+		return (0);
+	}
+	else
+	{
+		return (s1[i]);
 	}
 
 }
