@@ -2,25 +2,32 @@
 
 
 /**
- * _strpbrk -  function that gets the length of a prefix substring
- * @s: char
- * @accept: char
- * Return: memory adress of the first occurence
+ * _strpbrk - search the string
+ * @s: string to be searched
+ * @accept: what to search
+ *
+ * Return: the address memory of the first occurence
 */
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
+	char *ret = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = j = 0;
+	while (s[i])
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; accept[j]; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				return (&s[i]);
+				ret = &s[i];
+				break;
 			}
 		}
+		if (ret)
+		break;
+		i++;
 	}
-	return (NULL);
+	return (ret);
 }
 
