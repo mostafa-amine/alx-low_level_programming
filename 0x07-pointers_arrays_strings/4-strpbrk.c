@@ -1,33 +1,25 @@
 #include "main.h"
 
-
 /**
- * _strpbrk - search the string
- * @s: string to be searched
- * @accept: what to search
- *
- * Return: the address memory of the first occurence
+ * _strpbrk - function that gets the length of a prefix substring
+ * @s: char
+ * @accept: char
+ * Return: memory adress of the first occurence
 */
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
-	char *ret = 0;
 
-	i = j = 0;
-	while (s[i])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; accept[j]; j++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				ret = &s[i];
-				break;
+				return (&s[i]);
 			}
 		}
-		if (ret)
-		break;
-		i++;
 	}
-	return (ret);
+	return (0);
 }
 
