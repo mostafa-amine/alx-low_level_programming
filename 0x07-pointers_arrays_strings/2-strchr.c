@@ -20,6 +20,6 @@ char *_strchr(char *s, char c)
 		}
 	}
 
-	return (NULL);
+	return ('\0');
 }
 
