@@ -1,23 +1,21 @@
+#include "main.h"
+
 
 /**
- * _strpbrk - function that gets the length of a prefix substring
- * @s: char
- * @accept: char
- * Return: memory adress of the first occurence
+ * print_chessboard - function that prints the chessboard.
+ * a: char
 */
-char *_strpbrk(char *s, char *accept)
+void print_chessboard(char (*a)[8])
 {
-	unsigned int i, j;
+	int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; j < 8; j++)
 		{
-			if (s[i] == accept[j])
-			{
-				return (&s[i]);
-			}
+			_putchar(a[i][j]);
 		}
+		_putchar('\n');
 	}
-	return (NULL);
 }
+
