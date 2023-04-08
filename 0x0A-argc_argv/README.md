@@ -62,3 +62,16 @@ int main() {
 
 
 using `int main(void)` is just a convention to make the code more readable and to make it clear that the `main` function doesn't take any arguments. It's not necessary to cast any parameters with `(void)` in the `main` function.
+
+
+# strtol
+The function takes a string as input, and returns the converted integer value. It also sets a pointer to the first character in the string that is not part of the number.
+
+```c
+long int strtol(const char *str, char &ptr, int base);
+```
+``str`` = string to be converted
+``&ptr`` = The adress of a char pointer, if a character is found the pointer ptr points to that character else it returns `\0` null charachter.
+`base` is the number base of the input string. It can be any value from 2 to 36, or 0. If `base` is 0, the base is determined automatically based on the prefix of the input string ("0x" for hexadecimal, "0" for octal, and 10 for decimal otherwise).
+
+
