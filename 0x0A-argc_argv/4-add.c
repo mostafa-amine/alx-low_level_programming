@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	}
 
 	if (sum != 0)
-		printf("%d", sum);
+		printf("%d\n", sum);
 
 	return (0);
 }
