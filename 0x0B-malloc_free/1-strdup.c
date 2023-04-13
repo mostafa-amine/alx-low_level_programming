@@ -10,7 +10,7 @@
 char *_strdup(char *str)
 {
 	char *duplicated, *strle = str;
-	int length = 0, i;
+	int length = 0;
 
 	while (*strle != '\0')
 	{
